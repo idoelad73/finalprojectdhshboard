@@ -33,10 +33,12 @@ export default function LoginPage() {
 
     onSuccess: (data) => {
         // Store email for dashboard
-        localStorage.setItem('admin_email', data.user_email);
+        localStorage.setItem("token", data.token);
+        localStorage.setItem('admin_email', data.user.user_email);
+        console.log('admin_email', data.user.user_email);
       
         // Check role
-        if (data.user_role === 'admin') {
+        if (data.user.user_role === 'admin') {
           navigate('/dashboard');
         } else {
           // SweetAlert2 popup
