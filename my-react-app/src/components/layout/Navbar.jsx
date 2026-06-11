@@ -28,10 +28,10 @@ export default function DashboardNavbar({ activeTab }) {
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex space-x-2">
+          <div className="flex space-x-1 sm:space-x-2">
             <Link
               to="/login"
-              className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
+              className={`px-3 sm:px-6 py-2 rounded-lg font-medium transition-all duration-200 text-sm sm:text-base ${
                 activeTab === 'login'
                   ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-100'
@@ -42,7 +42,7 @@ export default function DashboardNavbar({ activeTab }) {
 
             <Link
               to="/about"
-              className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
+              className={`px-3 sm:px-6 py-2 rounded-lg font-medium transition-all duration-200 text-sm sm:text-base ${
                 activeTab === 'about'
                   ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md'
                   : 'text-slate-600 hover:bg-slate-100'

@@ -106,13 +106,13 @@ export default function Orders({ orders, loading, error }) {
     <div className="space-y-6">
 
       {/* -------------------- Filters -------------------- */}
-      <div className="flex flex-col md:flex-row md:items-center gap-4">
-        <div className="flex items-center gap-4">
-          <label className="font-semibold text-slate-700">User Email:</label>
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <label className="font-semibold text-slate-700 text-sm whitespace-nowrap">User Email:</label>
           <select
             value={selectedUserId}
             onChange={(e) => setSelectedUserId(e.target.value)}
-            className="border border-slate-300 rounded-lg px-4 py-2 bg-white"
+            className="w-full sm:w-auto border border-slate-300 rounded-lg px-3 py-2 bg-white text-sm"
           >
             <option value="">All Users</option>
             {loadingUsers ? (
@@ -127,14 +127,14 @@ export default function Orders({ orders, loading, error }) {
           </select>
         </div>
 
-        <div className="flex items-center gap-4">
-          <label className="font-semibold text-slate-700">Order #:</label>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <label className="font-semibold text-slate-700 text-sm whitespace-nowrap">Order #:</label>
           <input
             type="text"
             placeholder="Search order number"
             value={orderSearch}
             onChange={(e) => setOrderSearch(e.target.value)}
-            className="border border-slate-300 rounded-lg px-4 py-2 w-64"
+            className="w-full sm:w-64 border border-slate-300 rounded-lg px-3 py-2 text-sm"
           />
         </div>
       </div>

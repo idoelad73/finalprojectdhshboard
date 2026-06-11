@@ -61,9 +61,9 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-slate-800">Welcome Back</h2>
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-5 sm:p-8 border border-slate-200">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">Welcome Back</h2>
           <p className="text-slate-500 mt-2">
             Sign in to access your dashboard
           </p>

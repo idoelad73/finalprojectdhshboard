@@ -42,14 +42,14 @@ export default function Tickets() {
     <div className="space-y-6">
 
       {/* -------------------- Search -------------------- */}
-      <div className="flex items-center gap-4">
-        <label className="font-semibold text-slate-700">Ticket #:</label>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+        <label className="font-semibold text-slate-700 text-sm">Ticket #:</label>
         <input
           type="text"
           placeholder="Search ticket number (e.g. T00003)"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="border border-slate-300 rounded-lg px-4 py-2 w-64
+          className="w-full sm:w-64 border border-slate-300 rounded-lg px-4 py-2 text-sm
                      focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
       </div>
@@ -96,11 +96,11 @@ export default function Tickets() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-4 sm:p-6 space-y-4">
 
                   <div className="flex items-center gap-3 text-slate-700">
-                    <Mail size={18} />
-                    <span className="font-medium">{ticket.user_email}</span>
+                    <Mail size={18} className="flex-shrink-0" />
+                    <span className="font-medium text-sm sm:text-base break-all">{ticket.user_email}</span>
                   </div>
 
                   <div>

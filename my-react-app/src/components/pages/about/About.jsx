@@ -1,22 +1,22 @@
 export default function AboutPage() {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-6 sm:py-12">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-10 border border-slate-200">
-              <div className="text-center mb-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-10 border border-slate-200">
+              <div className="text-center mb-7 sm:mb-10">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-5 sm:mb-6 shadow-lg">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h2 className="text-4xl font-bold text-slate-800 mb-4">About Dashboard</h2>
-                <p className="text-xl text-slate-600">Your Central Command Center</p>
+                <h2 className="text-2xl sm:text-4xl font-bold text-slate-800 mb-3 sm:mb-4">About Dashboard</h2>
+                <p className="text-base sm:text-xl text-slate-600">Your Central Command Center</p>
               </div>
   
               <div className="space-y-8">
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
-                  <h3 className="text-2xl font-semibold text-slate-800 mb-3">What is Dashboard?</h3>
+                  <h3 className="text-lg sm:text-2xl font-semibold text-slate-800 mb-3">What is Dashboard?</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Dashboard is your comprehensive data visualization and management platform designed to provide 
                     real-time insights into your business metrics. With an intuitive interface and powerful analytics, 

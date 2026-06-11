@@ -126,24 +126,36 @@ export default function Products() {
   return (
     <div className="space-y-4">
       {/* -------------------- Header / Filters -------------------- */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <h2 className="text-2xl font-bold text-slate-800">Products</h2>
+      <div className="flex flex-col gap-3">
+        <div className="flex justify-between items-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-800">Products</h2>
+          <button
+            onClick={handleAddProduct}
+            className="inline-flex items-center gap-1.5 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl
+                     bg-gradient-to-r from-indigo-500 to-purple-600
+                     text-white font-semibold shadow-lg text-sm sm:text-base
+                     hover:shadow-xl hover:-translate-y-0.5 transition"
+          >
+            <Plus size={16} />
+            Add Product
+          </button>
+        </div>
 
-        <div className="flex flex-col md:flex-row gap-2 items-start md:items-center">
+        <div className="flex flex-col sm:flex-row gap-2">
           {/* Search Input */}
           <input
             type="text"
             placeholder="Search products..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full sm:w-auto px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
           />
 
           {/* Category Select */}
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full sm:w-auto px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
           >
             <option value="">All Categories</option>
             {categories.map((cat) => (
@@ -152,18 +164,6 @@ export default function Products() {
               </option>
             ))}
           </select>
-
-          {/* Add Product Button */}
-          <button
-            onClick={handleAddProduct}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl
-                     bg-gradient-to-r from-indigo-500 to-purple-600
-                     text-white font-semibold shadow-lg
-                     hover:shadow-xl hover:-translate-y-0.5 transition"
-          >
-            <Plus size={18} />
-            Add Product
-          </button>
         </div>
       </div>
 
